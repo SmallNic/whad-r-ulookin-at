@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :domains
+
+  validates :first_name, :last_name, presence: true
+  validates :email, uniqueness:true
+
 end
