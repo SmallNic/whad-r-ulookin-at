@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208031608) do
+ActiveRecord::Schema.define(version: 20170208035548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20170208031608) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_domains_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,6 +60,7 @@ ActiveRecord::Schema.define(version: 20170208031608) do
     t.index ["visitor_id"], name: "index_visits_on_visitor_id", using: :btree
   end
 
+  add_foreign_key "domains", "users"
   add_foreign_key "visits", "domains"
   add_foreign_key "visits", "visitors"
 end

@@ -2,6 +2,6 @@ class Visit < ApplicationRecord
   belongs_to :domain
   belongs_to :visitor
 
-  validates :domain, :user, :url, :browser, :new_visit, presence:true
-  
+  validates :domain, :visitor, :url, :browser, :new_visit, presence:true
+
 end

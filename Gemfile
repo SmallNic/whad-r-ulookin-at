@@ -41,6 +41,26 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # rspec-rails is a testing framework for Rails 3.x and 4.x.
+  gem 'rspec-rails', '~> 3.5'
+  # Capybara helps you test web applications by simulating how a real user would interact with your app.
+  gem 'capybara'
+  # Guard::RSpec allows to automatically & intelligently launch specs when files are modified.
+  gem 'guard-rspec', require: false
+  # Global notification system originally for Mac OS X.
+  gem 'growl'
+  # Launchy is helper class for launching cross-platform applications in a fire and forget manner.
+  gem 'launchy'
+  #factory_girl is a fixtures replacement
+  gem 'factory_girl_rails'
+  #Collection of testing matchers
+  gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'faker'
 end
 
 group :development do
