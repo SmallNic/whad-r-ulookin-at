@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  domain: one
+  visitor: one
+  url: MyString
+  browser: MyString
+  new_visit: false
+
+two:
+  domain: two
+  visitor: two
+  url: MyString
+  browser: MyString
+  new_visit: false
