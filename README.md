@@ -1,7 +1,7 @@
 # Whad-R-ULookin'-At?
 
 ##About
-This app allows users to instrument their web pages with some simple JavaScript that records basic information about the user viewing a page and sends it back to **Whad-R-ULookin'-At?**.
+This app allows users to instrument their web pages with some simple JavaScript that records basic information about the user viewing a page and sends it back to **Whad-R-ULookin'-At?**
 
 **Whad-R-U-Lookin'-At?** captures:
 * Visitor's IP
