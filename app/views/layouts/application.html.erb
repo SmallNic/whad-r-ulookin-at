@@ -11,6 +11,10 @@
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+  <h1><%= link_to "Welcome to Whad-R-ULookin'-At?", root_path %></h1>
+  <nav>
+    <%= link_to "Log Out", sign_out_path %>
+  </nav>
   <%= yield %>
 </body>
 </html>
