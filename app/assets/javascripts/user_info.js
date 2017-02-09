@@ -2,13 +2,14 @@ var ipAddress;
 var url;
 var dateTime;
 var browser;
-var unique;
+var newVisit;
+var dfr = $.Deferred();
+
 
 //Get a user's IP address
-// Need to wait until IP is found before returning it, else "undefined"
 function getIP(){
   $.getJSON("//api.ipify.org?format=json", function (data) {
-    return data.ip;
+    ipAddress =  data.ip;
   })
 }
 
@@ -44,29 +45,33 @@ function getBrowser(){
   return navigator.sayswho
 }
 
-
-//Use Fingerprint JS to determine if user is new or unique
-
-
-function getUserInfO(){
-
-  ipAddress= getIP();
-  url= getURL();
-  dateTime= getDateTime();
-  browser= getBrowser();
-  return dfr.promise();
+//Determine if user is new or unique
+function checkIfUserExists(){
 }
 
 
-function saveData(){
+function sendData(){
   //Send data via Ajax to Rails API
+  console.log("ipAddress", ipAddress)
+  console.log("url", url)
+  console.log("dateTime", dateTime)
+  console.log("browser", browser)
 }
 
 
 
 
-$(document).on("ready", function(){
+$(document).on("turbolinks:load", function(){
 
-  $.when(getUserInfo()).done(saveData);
+  //Get User IP
+  //Check if User already exists using IP
+  //If User already exists
+    //Set newVisit to false
+  //else
+    //Set newVisit to true
+  //Get URL visited
+  //Get date & time of visit
+  //Get browser used for visit
+  //Send User data via ajax to Rails API
 
 })
